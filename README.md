@@ -63,8 +63,7 @@ Add your Render API link here
 Skyscope/
 │
 ├── frontend/
-│   ├── index.html
-│   ├── style.css
+│   ├── index.html 
 │   └── script.js
 │
 ├── backend/
