@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Skyscope</title>
+  </head>
+  <body class="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white flex items-center justify-center p-6">
+    <main class="w-full max-w-md rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 p-8 shadow-2xl">
+        <h1 class="text-3xl font-semibold text-center">Skyscope</h1>
+        <p class="text-center text-white/70 mt-2">Enter your city and country to get the weather forecast</p>
+
+        <form id="weatherForm" class="mt-8 space-y-4">
+            <label class="block text-sm font-medium text-white/80" for="countrySelect">Country</label>
+            <select class="w-full rounded-xl border-white/20 bg-white/10 px-4 py-3 text-cyan-400 focus:border-sky-300 focus:outline-none" id="countrySelect" required>
+                <option value="" class="text-slate-900">Loading countries...</option>
+            </select>
+
+            <label class="block text-sm font-medium text-white/80" for="citySelect">City (states list)</label>
+            <select
+            id="citySelect"
+            class="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-cyan-400 focus:border-sky-300 focus:outline-none"
+            required
+            >
+            <option value="" class="text-slate-900">Select a country first</option>
+            </select>
+
+            <button class="w-full rounded-xl bg-sky-500 py-3 font-semibold text-white hover:bg-sky-400 transition" type="submit">
+            Get Weather
+            </button>
+        </form>
+
+        <div id="message" class="mt-6 text-center text-white/70"></div>
+
+        <div id="result" class="mt-6 hidden rounded-2xl bg-white/10 border border-white/10 p-6">
+            <h2 id="resultCity" class="text-xl font-semibold"></h2>
+            <div id="resultTemp" class="text-5xl font-bold text-center my-6"></div>
+            <p id="resultDesc" class="text-center text-lg text-white/90"></p>
+            <div id="resultWind" class="text-center text-white/70 mt-2"></div>
+            <div id="resultRain" class="text-center text-white/70 mt-2"></div>
+            <div id="resultHumidity" class="text-center text-white/70 mt-2"></div>
+
+        </div>
+
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
