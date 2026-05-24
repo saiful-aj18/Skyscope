@@ -10,7 +10,7 @@
       @theme {
         --font-sans: 'Syne', sans-serif;
         --font-mono: 'JetBrains Mono', monospace;
-        --color-sky-glow: rgba(14,165,233,0.18);
+        --color-sky-glow: rgba(60,155,123,0.18);
         --animate-pulse-glow: pulse-glow 2.8s ease-in-out infinite;
         --animate-slide-up: slide-up 0.45s cubic-bezier(0.16,1,0.3,1) both;
       }
@@ -26,25 +26,25 @@
   </head>
 
   <body class="font-sans min-h-screen bg-[#020917] text-slate-100 flex items-center justify-center p-6
-               bg-[radial-gradient(ellipse_80%_40%_at_50%_0%,rgba(14,165,233,0.16),transparent)]">
+               bg-[radial-gradient(ellipse_80%_40%_at_50%_0%,rgba(15, 23, 42, ,transparent)]">
 
-    <!-- dot-grid overlay -->
+    
     <div class="fixed inset-0 pointer-events-none z-0
                 bg-[radial-gradient(circle,rgba(255,255,255,0.04)_1px,transparent_1px)]
                 [background-size:36px_36px]"></div>
 
     <main class="relative z-10 w-full max-w-[440px] flex flex-col gap-5">
 
-      <!-- ── Card ── -->
+      
       <div class="rounded-[28px] p-9
                   bg-white/[0.035] backdrop-blur-2xl
                   border border-white/[0.08]
                   shadow-[0_40px_80px_rgba(0,0,0,0.6),inset_0_0_0_0.5px_rgba(255,255,255,0.06),inset_0_1px_0_rgba(255,255,255,0.09)]">
 
-        <!-- Header -->
+        
         <div class="flex flex-col items-center gap-2.5 mb-7">
           <div class="flex items-center gap-3">
-            <!-- glowing dot -->
+            
             <span class="w-2.5 h-2.5 rounded-full bg-sky-400 flex-shrink-0
                          animate-[pulse-glow_2.8s_ease-in-out_infinite]
                          shadow-[0_0_12px_#38bdf8,0_0_28px_rgba(56,189,248,0.5)]"></span>
@@ -55,24 +55,24 @@
           </p>
         </div>
 
-        <!-- Divider -->
+        
         <div class="h-px bg-gradient-to-r from-transparent via-white/[0.07] to-transparent mb-7"></div>
 
-        <!-- Form -->
+        
         <form id="weatherForm" class="flex flex-col gap-5">
 
-          <!-- Country -->
+          
           <div class="flex flex-col gap-2">
             <label for="countrySelect"
                    class="flex items-center gap-1.5 text-[0.65rem] font-semibold tracking-[0.1em] uppercase text-slate-500">
-              <!-- globe svg -->
+              
               <svg class="w-3.5 h-3.5 text-sky-500/60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
               </svg>
               Country
             </label>
             <div class="relative">
-              <!-- map-pin -->
+              
               <svg class="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-sky-400/55" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
               </svg>
@@ -86,25 +86,25 @@
                        transition-all duration-200">
                 <option value="" class="bg-[#0f1e35] text-slate-300">Loading countries…</option>
               </select>
-              <!-- chevron -->
+              
               <svg class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="6 9 12 15 18 9"/>
               </svg>
             </div>
           </div>
 
-          <!-- City -->
+          
           <div class="flex flex-col gap-2">
             <label for="citySelect"
                    class="flex items-center gap-1.5 text-[0.65rem] font-semibold tracking-[0.1em] uppercase text-slate-500">
-              <!-- building svg -->
+              
               <svg class="w-3.5 h-3.5 text-sky-500/60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 22V12h6v10M3 9h18M9 3v6M15 3v6"/>
               </svg>
               City
             </label>
             <div class="relative">
-              <!-- crosshair -->
+              
               <svg class="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-sky-400/55" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/>
               </svg>
@@ -124,7 +124,7 @@
             </div>
           </div>
 
-          <!-- Submit button -->
+          
           <button type="submit"
             class="mt-1 flex items-center justify-center gap-2.5
                    rounded-2xl py-4 px-6
@@ -135,7 +135,7 @@
                    hover:-translate-y-0.5
                    active:translate-y-0 active:brightness-95
                    transition-all duration-200 cursor-pointer">
-            <!-- cloud search svg -->
+            
             <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 6a6 6 0 0 1 6 6 6 6 0 0 1-1.75 4.24L20 20"/><circle cx="12" cy="12" r="6"/>
               <path d="M4.93 4.93A9 9 0 0 0 3 12a9 9 0 0 0 9 9"/>
@@ -144,15 +144,15 @@
           </button>
         </form>
 
-        <!-- Message -->
+        
         <div id="message" class="mt-5 text-center text-[0.8rem] text-slate-400/70 min-h-5"></div>
 
-        <!-- Result panel -->
+        
         <div id="result" class="hidden animate-[slide-up_0.45s_cubic-bezier(0.16,1,0.3,1)_both]">
 
           <div class="h-px bg-gradient-to-r from-transparent via-white/[0.07] to-transparent my-6"></div>
 
-          <!-- City row -->
+          
           <div class="flex items-start justify-between mb-1">
             <h2 id="resultCity" class="text-base font-semibold text-white/95 flex items-center gap-2">
               <svg class="w-4 h-4 text-sky-400 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -162,7 +162,7 @@
             <span id="resultTime" class="font-mono text-[0.68rem] text-slate-500/70 mt-1"></span>
           </div>
 
-          <!-- Temperature -->
+          
           <div class="flex items-end justify-center my-5">
             <span id="resultTemp"
               class="font-mono font-light text-[5.5rem] leading-none tracking-tighter
@@ -170,10 +170,10 @@
                      bg-clip-text text-transparent"></span>
           </div>
 
-          <!-- Description -->
+          
           <p id="resultDesc" class="text-center text-sm font-medium text-slate-300/90 capitalize mb-6"></p>
 
-          <!-- Stat pills -->
+          
           <div class="grid grid-cols-3 gap-2.5">
 
             <div class="flex flex-col gap-1.5 rounded-2xl p-3.5
@@ -214,7 +214,7 @@
 
       </div>
 
-      <!-- Footer -->
+      
       <p class="text-center text-[0.68rem] tracking-wider text-slate-700">
         Powered by Open-Meteo &middot; Skyscope v1.0
       </p>
