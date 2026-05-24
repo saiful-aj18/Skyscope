@@ -17,7 +17,7 @@ async function loadCountries() {
     message.textContent = "Loading countries...";
 
     try {
-        const response = await fetch("http://localhost:3000/api/countries");
+        const response = await fetch("https://skyscope-api.onrender.com/api/countries");
         const countries = await response.json();
 
         countrySelect.innerHTML = "<option value =''>Select a country</option>"
@@ -44,7 +44,7 @@ async function loadCities(countryCode, preferredCity) {
     message.innerText = "Loading cities..."
 
     try {
-        const response = await fetch(`http://localhost:3000/api/cities?countryCode=${countryCode}`);
+        const response = await fetch(`https://skyscope-api.onrender.com/api/cities?countryCode=${countryCode}`);
         const cities = await response.json();
 
         citySelect.innerHTML = "<option value =''>Select a city</option>"
@@ -115,7 +115,7 @@ form.addEventListener("submit", async (event) => {
         const lng = selectedOption.dataset.lon;
         const country = countrySelect.value;
 
-        const response = await fetch(`http://localhost:3000/api/weather?city=${city}&country=${country}&lat=${lat}&lon=${lng}`);
+        const response = await fetch(`https://skyscope-api.onrender.com/api/weather?city=${city}&country=${country}&lat=${lat}&lon=${lng}`);
         const data = await response.json();
 
         if (!response.ok) {
